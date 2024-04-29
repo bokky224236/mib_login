@@ -1,6 +1,6 @@
 {
-    "name": "mib_login",
-    "short_name": "mib_login",
+    "name": "flutter_login2",
+    "short_name": "flutter_login2",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
