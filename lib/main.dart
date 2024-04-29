@@ -34,11 +34,15 @@ class MyApp extends StatelessWidget {
         initialRoute: '/', // Set initial route to login
         routes: {
           '/': (context) => LoginApp(),
-          '/wishlist': (context) => wishlist(imagePath: 'assets/',),
+          '/wishlist': (context) => wishlist(
+                imagePath: 'assets/',
+              ),
           '/HomePage': (context) => HomePage(), //navbar
           '/SettingPage': (context) => SettingPage(),
           '/MyCartPage': (context) => CartScreen(imagePath: 'assets/'),
-          '/HomePagemew': (context) => HomePagemew(imagePath: 'assets/',),
+          '/HomePagemew': (context) => HomePagemew(
+                imagePath: 'assets/',
+              ),
           '/Payment': (context) => Payment(),
           '/store': (context) => store(),
         },
