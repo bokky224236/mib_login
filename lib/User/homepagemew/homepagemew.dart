@@ -41,12 +41,15 @@ class HomePagemew extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return SingleChildScrollView(
       child: Column(
         children: [
           Container(
-            width: 430,
-            height: 1900,
+            width: screenWidth,
+            height: screenHeight * 2, // Adjust height as needed
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(color: Color(0xFFFFC5C5)),
             child: Stack(

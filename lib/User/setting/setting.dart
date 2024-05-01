@@ -8,6 +8,7 @@ import 'package:flutter_login2/User/store/store.dart';
 import 'package:flutter_login2/User/login/login.dart';
 import 'package:flutter_login2/User/homepagemew/homepagemew.dart';
 import 'package:flutter_login2/screenmycart/cart_screen.dart';
+import 'package:flutter_login2/User/deleteaccount/deleteaccount.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -61,8 +62,9 @@ class SettingPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  wishlist(imagePath: '',))); // ทำงานเมื่อกดปุ่ม My Orde
+                              builder: (context) => wishlist(
+                                    imagePath: '',
+                                  ))); // ทำงานเมื่อกดปุ่ม My Orde
                     },
                     trailing: Icon(Icons.keyboard_arrow_right),
                   ),
@@ -100,6 +102,18 @@ class SettingPage extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) =>
                                   LoginApp())); // ทำงานเมื่อกดปุ่ม My Orde
+                    },
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.delete),
+                    title: Text("Delete Account"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  Deleteaccount())); // ทำงานเมื่อกดปุ่ม My Orde
                     },
                     trailing: Icon(Icons.keyboard_arrow_right),
                   ),

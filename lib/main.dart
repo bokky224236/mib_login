@@ -12,6 +12,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_login2/screenmycart/cart_provider.dart';
 import 'package:flutter_login2/screenmycart/catalog_screen.dart';
 import 'package:flutter_login2/screenmycart/cart_screen.dart';
+import 'package:flutter_login2/User/deleteaccount/deleteaccount.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
