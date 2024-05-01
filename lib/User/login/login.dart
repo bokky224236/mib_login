@@ -150,6 +150,7 @@ class LoginApp extends StatelessWidget {
                     Text("Sign up",style: TextStyle(fontSize: 15.0,
                     fontWeight: FontWeight.bold, // ทำให้ "Sign up" หนา
                     color: Color(0xff503C3C),
+                    decoration: TextDecoration.underline,
                     ),
                   ),
                   ],
