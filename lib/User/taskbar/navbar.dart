@@ -54,34 +54,34 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Color(0xff3D3B40),
+              color: Colors.black,
             ),
             label: 'Home',
-            backgroundColor: Color(0xffFFF6DC),
+            backgroundColor: Color.fromARGB(255, 252, 129, 170),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.store,
-              color: Color(0xff3D3B40),
+              color: Colors.black,
             ),
             label: 'Store',
-            backgroundColor: Color(0xffFFF6DC),
+            backgroundColor: Color.fromARGB(255, 252, 129, 170),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.favorite,
-              color: Color(0xff3D3B40),
+              color: Colors.black,
             ),
             label: 'Wishlist',
-            backgroundColor: Color(0xffFFF6DC),
+            backgroundColor:Color.fromARGB(255, 252, 129, 170),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
-              color: Color(0xff3D3B40),
+              color: Colors.black,
             ),
             label: 'Profile',
-            backgroundColor: Color(0xffFFF6DC),
+            backgroundColor:Color.fromARGB(255, 252, 129, 170),
           ),
         ],
         currentIndex: currentIndex,

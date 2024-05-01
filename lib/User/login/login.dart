@@ -135,21 +135,27 @@ class LoginApp extends StatelessWidget {
                 ),
                 SizedBox(height: 10.0),
                 TextButton(
-                  onPressed: () {
-                    // Navigate to the SignupApp page
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SignupApp()),
-                    );
-                  },
-                  child: Text(
-                    "Don't have an account? Sign up",
-                    style: TextStyle(
-                      fontSize: 15.0,
-                      color: Color(0xff503C3C),
+                onPressed: () {
+                  // Navigate to the SignupApp page
+                Navigator.push(
+                 context,
+                MaterialPageRoute(builder: (context) => SignupApp()),
+                );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Don't have an account? ",style: TextStyle(fontSize: 15.0,color: Color(0xff503C3C),),
+                    ),
+                    Text("Sign up",style: TextStyle(fontSize: 15.0,
+                    fontWeight: FontWeight.bold, // ทำให้ "Sign up" หนา
+                    color: Color(0xff503C3C),
                     ),
                   ),
-                ),
+                  ],
+                  ),
+                  ),
+
               ],
             ),
           ),
