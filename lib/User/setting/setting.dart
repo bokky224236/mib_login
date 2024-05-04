@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login2/User/payment/payment.dart';
+import 'package:flutter_login2/User/payment/payment2.dart';
+import 'package:flutter_login2/User/payment/card_form_sceen.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
 import 'package:flutter_login2/User/signup/signup.dart';
@@ -90,6 +92,18 @@ class SettingPage extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) =>
                                   store())); // ทำงานเมื่อกดปุ่ม My Orde
+                    },
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.store),
+                    title: Text("Payment"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  payment2())); // ทำงานเมื่อกดปุ่ม My Orde
                     },
                     trailing: Icon(Icons.keyboard_arrow_right),
                   ),
