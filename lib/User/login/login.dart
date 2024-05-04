@@ -10,6 +10,7 @@ import 'package:flutter_login2/User/homepagemew/homepagemew.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_login2/User/deleteaccount/deleteaccount.dart';
+import 'package:flutter_login2/User/forgetpassword/forget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -135,28 +136,64 @@ class LoginApp extends StatelessWidget {
                 ),
                 SizedBox(height: 10.0),
                 TextButton(
-                onPressed: () {
-                  // Navigate to the SignupApp page
-                Navigator.push(
-                 context,
-                MaterialPageRoute(builder: (context) => SignupApp()),
-                );
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Don't have an account? ",style: TextStyle(fontSize: 15.0,color: Color(0xff503C3C),),
-                    ),
-                    Text("Sign up",style: TextStyle(fontSize: 15.0,
-                    fontWeight: FontWeight.bold, // ทำให้ "Sign up" หนา
-                    color: Color(0xff503C3C),
-                    decoration: TextDecoration.underline,
-                    ),
+                  onPressed: () {
+                    // Navigate to the SignupApp page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ForgetPassword()),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 3.0),
+                        child: Text(
+                          "Forget your password?",
+                          style: TextStyle(
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xffFF407D),
+                            decoration: TextDecoration.underline,
+                            decorationColor: Color(
+                                0xffFF407D), // Set the color of the underline
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  ],
+                ),
+                SizedBox(height: 5.0),
+                TextButton(
+                  onPressed: () {
+                    // Navigate to the SignupApp page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignupApp()),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don't have an account? ",
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          color: Color(0xff503C3C),
+                        ),
+                      ),
+                      Text(
+                        "Sign up",
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold, // ทำให้ "Sign up" หนา
+                          color: Color(0xffFF407D),
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ],
                   ),
-                  ),
-
+                ),
               ],
             ),
           ),
