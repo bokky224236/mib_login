@@ -70,7 +70,7 @@ class HomePagemew extends StatelessWidget {
                 ),
                 Positioned(
                   left: 230,
-                  top: 704,
+                  top: 620,
                   child: Container(
                     width: 158,
                     height: 198,
@@ -230,7 +230,7 @@ class HomePagemew extends StatelessWidget {
                 ),
                 Positioned(
                   left: 35,
-                  top: 643,
+                  top: 590,
                   child: Container(
                     width: 174,
                     height: 23,
@@ -266,7 +266,7 @@ class HomePagemew extends StatelessWidget {
                 ),
                 Positioned(
                   left: 51,
-                  top: 704,
+                  top: 620,
                   child: Container(
                     width: 158,
                     height: 198,
@@ -281,7 +281,7 @@ class HomePagemew extends StatelessWidget {
                 ),
                 Positioned(
                   left: 60,
-                  top: 712,
+                  top: 627,
                   child: SizedBox(
                     width: 144,
                     height: 130,
@@ -290,7 +290,7 @@ class HomePagemew extends StatelessWidget {
                 ),
                 Positioned(
                   left: 60,
-                  top: 847,
+                  top: 765,
                   child: Container(
                     width: 150,
                     height: 17,
@@ -382,7 +382,7 @@ class HomePagemew extends StatelessWidget {
                 ),
                 Positioned(
                   left: 49,
-                  top: 415,
+                  top: 380,
                   child: Container(
                     width: 321,
                     height: 185,
