@@ -96,7 +96,7 @@ class SettingPage extends StatelessWidget {
                     trailing: Icon(Icons.keyboard_arrow_right),
                   ),
                   ListTile(
-                    leading: Icon(Icons.store),
+                    leading: Icon(Icons.payment),
                     title: Text("Payment"),
                     onTap: () {
                       Navigator.push(
