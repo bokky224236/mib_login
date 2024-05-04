@@ -101,7 +101,7 @@ class ForgetPassword extends StatelessWidget {
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  hintText: 'Enter your password',
+                  hintText: 'Enter your email',
                   filled: true,
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
