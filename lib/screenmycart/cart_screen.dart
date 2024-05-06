@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login2/User/payment/payment2.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_login2/screenmycart/cart_provider.dart';
 import 'package:flutter_login2/screenmycart/constants.dart';
 import 'package:flutter_login2/screenmycart/widget.dart';
-import 'package:flutter_login2/User/payment/payment.dart';
 
 class CartScreen extends StatelessWidget {
   final String imagePath;
@@ -50,7 +50,7 @@ class CartScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Payment()),
+                  MaterialPageRoute(builder: (context) => payment2()),
                 );
               },
               child: Text("Buy \$${provider.price}"),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login2/User/payment/payment.dart';
+import 'package:flutter_login2/User/payment/payment2.dart';
+import 'package:flutter_login2/User/product/allproduct.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
 import 'package:flutter_login2/User/signup/signup.dart';
@@ -13,6 +14,7 @@ import 'package:flutter_login2/screenmycart/cart_provider.dart';
 import 'package:flutter_login2/screenmycart/catalog_screen.dart';
 import 'package:flutter_login2/screenmycart/cart_screen.dart';
 import 'package:flutter_login2/User/deleteaccount/deleteaccount.dart';
+import 'package:flutter_login2/User/product/productpage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,17 +37,16 @@ class MyApp extends StatelessWidget {
         initialRoute: '/', // Set initial route to login
         routes: {
           '/': (context) => LoginApp(),
-          '/wishlist': (context) => wishlist(
-                imagePath: 'assets/',
-              ),
-          '/HomePage': (context) => HomePage(), //navbar
-          '/SettingPage': (context) => SettingPage(),
-          '/MyCartPage': (context) => CartScreen(imagePath: 'assets/'),
-          '/HomePagemew': (context) => HomePagemew(
-                imagePath: 'assets/',
-              ),
-          '/Payment': (context) => Payment(),
-          '/store': (context) => store(),
+          '/wishlist': (context) =>wishlist(imagePath: 'assets/'),
+          '/HomePage': (context) =>HomePage(), //navbar
+          '/SettingPage': (context) =>SettingPage(imagePath: 'assets/',),
+          '/MyCartPage': (context) =>CartScreen(imagePath: 'assets/'),
+          '/HomePagemew': (context) =>HomePagemew(imagePath: 'assets/'),
+          '/Payment': (context) =>payment2(),
+          '/store': (context) =>store(),
+          '/product': (context) =>productPage(imagePath: 'assets/'),
+          '/allproduct': (context) =>Allproduct(),
+          '/catalog_screen': (context) =>CatalogScreen(imagePath: 'assets/'),
         },
       ),
     );

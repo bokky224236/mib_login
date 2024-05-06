@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login2/User/payment/payment.dart';
 import 'package:flutter_login2/User/payment/payment2.dart';
 import 'package:flutter_login2/User/payment/card_form_sceen.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
@@ -12,13 +11,12 @@ import 'package:flutter_login2/User/homepagemew/homepagemew.dart';
 import 'package:flutter_login2/screenmycart/cart_screen.dart';
 import 'package:flutter_login2/User/deleteaccount/deleteaccount.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: SettingPage(),
-  ));
-}
 
 class SettingPage extends StatelessWidget {
+  final String imagePath;
+
+  const SettingPage({required this.imagePath, Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,20 +57,19 @@ class SettingPage extends StatelessWidget {
                 children: <Widget>[
                   ListTile(
                     leading: Icon(Icons.favorite),
-                    title: Text("My Favorites"),
+                    title: Text("My Wishlist"),
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => wishlist(
-                                    imagePath: '',
-                                  ))); // ทำงานเมื่อกดปุ่ม My Orde
+                              builder: (context) => wishlist(imagePath: 'assets/'),
+                                  )); // ทำงานเมื่อกดปุ่ม My Orde
                     },
                     trailing: Icon(Icons.keyboard_arrow_right),
                   ),
                   ListTile(
                     leading: Icon(Icons.shopping_cart),
-                    title: Text("Cart"),
+                    title: Text("My Cart"),
                     onTap: () {
                       Navigator.push(
                           context,

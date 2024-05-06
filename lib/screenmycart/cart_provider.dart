@@ -8,7 +8,6 @@ class CartProvider extends ChangeNotifier {
   final List<Item> catalog = [];
 
   UnmodifiableListView get cartItems => UnmodifiableListView(catalog);
-  UnmodifiableListView get wishItems => UnmodifiableListView(catalog);
 
   double get price => catalog.fold<double>(
       0.0, (previousValue, element) => previousValue += element.price);

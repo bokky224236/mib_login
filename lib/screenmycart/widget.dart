@@ -22,7 +22,7 @@ class ItemWidget extends StatelessWidget {
     return ListTile(
       leading: Image.asset(
         '$imagePath${item.imagePath}', // ใช้ imagePath และ imageName เพื่อกำหนดที่อยู่ของรูปภาพ
-        width: 100,
+        width: 68,
         height: 100,
       ),
       title: Text(item.name),
@@ -38,13 +38,14 @@ class ItemWidget extends StatelessWidget {
             child: const Text("Add"),
           ),
           const SizedBox(width: 8),
-          IconButton(
-            icon: const Icon(
-              Icons.favorite,
-              color: Colors.red,
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: primaryColor,
             ),
             onPressed: () => provider.addToWishlist(item),
+            child: const Icon(Icons.favorite, color: Colors.red)
           ),
+          const SizedBox(width: 8),
         ],
       ),
     );

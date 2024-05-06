@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login2/User/payment/payment.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
 import 'package:flutter_login2/User/signup/signup.dart';
@@ -102,18 +101,18 @@ class HomePagemew extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          left: 13,
+                          left: 14,
                           top: 146,
                           child: Container(
                             width: 138,
-                            height: 14,
+                            height: 20,
                             child: Text(
-                              '🦖hello wednesday ! 🎀',
+                              'Hello wednesday!🎀',
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontFamily: 'Inter',
-                                fontWeight: FontWeight.w300,
+                                fontWeight: FontWeight.bold,
                                 height: 0,
                               ),
                             ),
@@ -230,7 +229,7 @@ class HomePagemew extends StatelessWidget {
                 ),
                 Positioned(
                   left: 35,
-                  top: 590,
+                  top: 585,
                   child: Container(
                     width: 174,
                     height: 23,
@@ -289,7 +288,7 @@ class HomePagemew extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 60,
+                  left: 62,
                   top: 765,
                   child: Container(
                     width: 150,
@@ -297,31 +296,18 @@ class HomePagemew extends StatelessWidget {
                     child: Stack(
                       children: [
                         Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Container(
-                            width: 137,
-                            height: 17,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFFFFC5C5),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(2)),
-                            ),
-                          ),
-                        ),
-                        Positioned(
                           left: 5,
                           top: 0,
                           child: SizedBox(
                             width: 145,
-                            height: 14,
+                            height: 20,
                             child: Text(
-                              '🦖hello wednesday ! 🎀',
+                              'Hello wednesday!🎀',
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontFamily: 'Inter',
-                                fontWeight: FontWeight.w300,
+                                fontWeight: FontWeight.bold,
                                 height: 0,
                               ),
                             ),
@@ -329,15 +315,6 @@ class HomePagemew extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
-                ),
-                Positioned(
-                  left: 131,
-                  top: 872,
-                  child: Container(
-                    width: 16,
-                    height: 16,
-                    child: Stack(children: []),
                   ),
                 ),
                 Positioned(
@@ -352,31 +329,6 @@ class HomePagemew extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [],
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 350,
-                  top: 867,
-                  child: Container(
-                    width: 24,
-                    height: 24,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 3.31, vertical: 3),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 10,
-                          height: 10,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFF222222),
-                            shape: OvalBorder(),
-                          ),
-                        ),
-                      ],
                     ),
                   ),
                 ),

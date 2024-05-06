@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login2/User/taskbar/navbar.dart';
-import 'package:flutter_login2/User/payment/payment.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/store/store.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
@@ -33,10 +32,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   List<Widget> widgetOptions = [
-    HomePagemew( imagePath: 'assets/',),
+    HomePagemew( imagePath: 'assets/'),
     store(),
-    wishlist(imagePath: 'assets/',), // Assuming Wishlist is a StatefulWidget
-    SettingPage(),
+    wishlist(imagePath: 'assets/'), // Assuming Wishlist is a StatefulWidget
+    SettingPage(imagePath: 'assets/'),
   ];
 
   @override

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login2/User/product/allproduct.dart';
-import 'package:flutter_login2/User/product/allproduct2.dart';
+import 'package:flutter_login2/User/product/productpage.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
 import 'package:flutter_login2/User/signup/signup.dart';
@@ -20,17 +19,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: store(),
+      home: Allproduct2(), // แก้ Allproduct เป็น Allproduct()
     );
   }
 }
 
-class store extends StatelessWidget {
+class Allproduct2 extends StatelessWidget {
+  final List<String> imagePaths = [
+    'assets/เดรสคล้องคอดอกไม้.jpg',
+    'assets/เดรสเจ้าหญิง.jpg',
+    'assets/เดรสเชอรี่.jpg',
+    'assets/เดรสดอกน้ำเงิน.jpg',
+    'assets/เดรสสั้นดอกไม้.jpg',
+    'assets/เดรสหมึกชมพู.jpg',
+    'assets/7.jpg',
+    'assets/8.jpg',
+    'assets/9.jpg',
+    'assets/10.jpg',
+    'assets/11.jpg',
+    'assets/12.jpg',
+    // เพิ่มเส้นทางรูปภาพอื่น ๆ ตามต้องการ
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Store'),
+        title: Text('Product'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -65,9 +80,9 @@ class store extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
-              height: 40,
+              height: 40, // Adjust the height of the "Products" section
               child: Text(
-                'Brand',
+                'All Products',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
             ),
@@ -76,39 +91,13 @@ class store extends StatelessWidget {
                 crossAxisCount: 2,
                 mainAxisSpacing: 20,
                 crossAxisSpacing: 20,
-                childAspectRatio: 0.7,
-                children: [
-                  BrandItem(
-                    brandName: 'LuxeVogue',
-                    imagePath: 'assets/lv.png',
-                    destinationPage: Allproduct(),
-                  ),
-                  BrandItem(
-                    brandName: 'EliteStyle',
-                    imagePath: 'assets/EliteStyle.png',
-                    destinationPage: Allproduct2(),
-                  ),
-                  BrandItem(
-                    brandName: 'Style Spectrum',
-                    imagePath: 'assets/EliteStyle (5).png',
-                    destinationPage: Allproduct2(),
-                  ),
-                  BrandItem(
-                    brandName: 'Panache',
-                    imagePath: 'assets/EliteStyle (2).png',
-                    destinationPage: Allproduct2(),
-                  ),
-                  BrandItem(
-                    brandName: 'Sartorial',
-                    imagePath: 'assets/EliteStyle (3).png',
-                    destinationPage: Allproduct2(),
-                  ),
-                  BrandItem(
-                    brandName: 'Glamour Galore',
-                    imagePath: 'assets/EliteStyle (4).png',
-                    destinationPage: Allproduct2(),
-                  ),
-                ],
+                childAspectRatio: 0.7, // Adjust aspect ratio for each item
+                children: imagePaths.map((imagePath) {
+                  return BrandItem(
+                    'Hello wednesday!🎀', // ตั้งชื่อสินค้าตามต้องการ
+                    imagePath,
+                  );
+                }).toList(),
               ),
             ),
           ],
@@ -121,13 +110,8 @@ class store extends StatelessWidget {
 class BrandItem extends StatelessWidget {
   final String brandName;
   final String imagePath;
-  final Widget destinationPage;
 
-  const BrandItem({
-    required this.brandName,
-    required this.imagePath,
-    required this.destinationPage,
-  });
+  BrandItem(this.brandName, this.imagePath);
 
   @override
   Widget build(BuildContext context) {
@@ -135,7 +119,7 @@ class BrandItem extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => destinationPage),
+          MaterialPageRoute(builder: (context) => productPage(imagePath: imagePath)),
         );
       },
       child: Container(

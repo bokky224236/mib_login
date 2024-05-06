@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
-import 'package:flutter_login2/screenmycart/constants.dart';
 import 'package:flutter_login2/screenmycart/cart_screen.dart';
+import 'package:flutter_login2/screenmycart/constants.dart';
 import 'package:flutter_login2/screenmycart/item_model.dart';
 import 'package:flutter_login2/screenmycart/items_list.dart';
 import 'package:flutter_login2/screenmycart/widget.dart';
+import 'package:flutter_login2/User/product/productpage.dart';
 
 class CatalogScreen extends StatelessWidget {
   final String imagePath;
 
-  const CatalogScreen({required this.imagePath, Key? key});
+  const CatalogScreen({required this.imagePath, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,18 +20,34 @@ class CatalogScreen extends StatelessWidget {
         title: Text("Catalog"),
         centerTitle: true,
         actions: [
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CartScreen(imagePath: 'assets/'),
-                ),
-              );
-            },
-            child: Icon(Icons.shopping_cart),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end, 
+            children: [
+               IconButton(
+                icon: Icon(Icons.favorite),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => wishlist(imagePath: 'assets/'),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(width: 0),
+               IconButton(
+                icon: Icon(Icons.shopping_cart),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CartScreen(imagePath: 'assets/'),
+                    ),
+                  );
+                },
+              ),
+            ],
           ),
-          SizedBox(width: 20),
         ],
       ),
       body: ListView.builder(
@@ -39,32 +56,6 @@ class CatalogScreen extends StatelessWidget {
           item: catalog[index],
           imagePath: imagePath,
           isCartItem: true,
-        ),
-      ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Align(
-          alignment: Alignment.bottomRight,
-          child: InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => wishlist(
-                    imagePath: 'assets/',
-                  ),
-                ),
-              );
-            },
-            child: Container(
-              padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(Icons.favorite, color: Colors.red, size: 50),
-            ),
-          ),
         ),
       ),
     );

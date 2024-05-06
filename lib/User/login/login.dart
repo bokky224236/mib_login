@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login2/User/payment/payment.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
 import 'package:flutter_login2/User/signup/signup.dart';
