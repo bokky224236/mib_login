@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login2/User/product/productpage.dart';
 import 'package:flutter_login2/screenmycart/item_model.dart';
 
-
 final List<Item> catalog = [
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "1a.jpg"),
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "2a.jpg"),
@@ -10,6 +9,8 @@ final List<Item> catalog = [
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "4a.jpg"),
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "5a.jpg"),
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "6a.jpg"),
+];
+final List<Item> catalog2 = [
   Item(name: "Hello wednesday!🎀",price: 56,imagePath: "เดรสคล้องคอดอกไม้.jpg"),
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "เดรสเจ้าหญิง.jpg"),
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "เดรสเชอรี่.jpg"),
@@ -23,4 +24,3 @@ final List<Item> catalog = [
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "11.jpg"),
   Item(name: "Hello wednesday!🎀", price: 56, imagePath: "12.jpg"),
 ];
-

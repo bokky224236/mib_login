@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "506686483883",
-    "project_id": "mibb-317d1",
-    "storage_bucket": "mibb-317d1.appspot.com"
+    "project_id": "mib-317d1",
+    "storage_bucket": "mib-317d1.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:506686483883:android:757e081f312aa46cd0b6ee",
         "android_client_info": {
-          "package_name": "com.example.flutter_login2"
+          "package_name": "com.mib.flutter_login2"
         }
       },
       "oauth_client": [],

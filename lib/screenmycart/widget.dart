@@ -34,16 +34,16 @@ class ItemWidget extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: primaryColor,
             ),
-            onPressed: () => provider.addItem(item),
-            child: const Text("Add"),
+            onPressed: () => provider.addToWishlist(item),
+            child: const Icon(Icons.favorite, color: Colors.red)
           ),
           const SizedBox(width: 8),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: primaryColor,
             ),
-            onPressed: () => provider.addToWishlist(item),
-            child: const Icon(Icons.favorite, color: Colors.red)
+            onPressed: () => provider.addItem(item),
+            child: const Text("Add"),
           ),
           const SizedBox(width: 8),
         ],

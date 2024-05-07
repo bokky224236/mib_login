@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login2/User/product/allproduct.dart';
+import 'package:flutter_login2/User/product/allproduct2.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
 import 'package:flutter_login2/User/signup/signup.dart';
@@ -8,30 +10,6 @@ import 'package:flutter_login2/User/login/login.dart';
 import 'package:flutter_login2/screenmycart/cart_screen.dart';
 import 'package:flutter_login2/screenmycart/catalog_screen.dart';
 import 'package:flutter_login2/screenmycart/cart_screen.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
-      home: Scaffold(
-        body: ListView(
-          children: [
-            HomePagemew(imagePath: 'assets/'),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 class HomePagemew extends StatelessWidget {
   final String imagePath;
@@ -53,6 +31,30 @@ class HomePagemew extends StatelessWidget {
             decoration: BoxDecoration(color: Color(0xFFFFC5C5)),
             child: Stack(
               children: [
+                // ตัวอย่างเพิ่ม TextField และปุ่มค้นหา
+                Positioned(
+                  left: 32,
+                  top: 132,
+                  child: Container(
+                    width: 355, // ปรับขนาดความกว้างของ TextField ตามต้องการ
+                    height: 40, // ปรับขนาดความสูงของ TextField ตามต้องการ
+                    child: TextField(
+                      style: TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        hintText: 'Search...',
+                        hintStyle: TextStyle(color: Colors.grey),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
+                        ),
+                        filled: true,
+                        fillColor: Colors.white,
+                        contentPadding: EdgeInsets.symmetric(horizontal: 15),
+                        suffixIcon: Icon(Icons.search, color: Colors.grey),
+                      ),
+                    ),
+                  ),
+                ),
                 Positioned(
                   left: 0,
                   top: 353,
@@ -70,68 +72,64 @@ class HomePagemew extends StatelessWidget {
                 Positioned(
                   left: 230,
                   top: 620,
-                  child: Container(
-                    width: 158,
-                    height: 198,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Container(
-                            width: 158,
-                            height: 198,
-                            decoration: ShapeDecoration(
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(
-                                    width: 1, color: Color(0xFFD9D9D9)),
-                                borderRadius: BorderRadius.circular(10),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Allproduct(), 
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: 158,
+                      height: 198,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            child: Container(
+                              width: 158,
+                              height: 198,
+                              decoration: ShapeDecoration(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(
+                                      width: 1, color: Color(0xFFD9D9D9)),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          left: 7,
-                          top: 7,
-                          child: SizedBox(
-                            width: 144,
-                            height: 131,
-                            child: Image.asset("assets/mmn2.png"),
+                          Positioned(
+                            left: 7,
+                            top: 7,
+                            child: SizedBox(
+                              width: 144,
+                              height: 160,
+                              child: Image.asset("assets/2a.jpg"),
+                            ),
                           ),
-                        ),
-                        Positioned(
-                          left: 14,
-                          top: 146,
-                          child: Container(
-                            width: 138,
-                            height: 20,
-                            child: Text(
-                              'Hello wednesday!🎀',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.bold,
-                                height: 0,
+                          Positioned(
+                            left: 14,
+                            top: 172,
+                            child: Container(
+                              width: 138,
+                              height: 20,
+                              child: Text(
+                                'Hello wednesday!🎀',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.bold,
+                                  height: 0,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 35,
-                  top: 125,
-                  child: Container(
-                    width: 359,
-                    height: 42,
-                    decoration: ShapeDecoration(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        ],
                       ),
                     ),
                   ),
@@ -152,37 +150,6 @@ class HomePagemew extends StatelessWidget {
                         height: 0,
                       ),
                     ),
-                  ),
-                ),
-                Positioned(
-                  left: 81,
-                  top: 138,
-                  child: SizedBox(
-                    width: 114,
-                    height: 17,
-                    child: Text(
-                      'Search in Store',
-                      style: TextStyle(
-                        color: Color(0xCC3D3B40),
-                        fontSize: 14,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 47,
-                  top: 132,
-                  child: Stack(
-                    children: [
-                      Icon(
-                        Icons.search,
-                        color: Colors.grey,
-                        size: 29,
-                      ),
-                    ],
                   ),
                 ),
                 Positioned(
@@ -263,57 +230,68 @@ class HomePagemew extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
+                 Positioned(
                   left: 51,
                   top: 620,
-                  child: Container(
-                    width: 158,
-                    height: 198,
-                    decoration: ShapeDecoration(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 60,
-                  top: 627,
-                  child: SizedBox(
-                    width: 144,
-                    height: 130,
-                    child: Image.asset("assets/mmn.png"),
-                  ),
-                ),
-                Positioned(
-                  left: 62,
-                  top: 765,
-                  child: Container(
-                    width: 150,
-                    height: 17,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 5,
-                          top: 0,
-                          child: SizedBox(
-                            width: 145,
-                            height: 20,
-                            child: Text(
-                              'Hello wednesday!🎀',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.bold,
-                                height: 0,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Allproduct(), 
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: 158, 
+                      height: 198,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            child: Container(
+                              width: 158,
+                              height: 198,
+                              decoration: ShapeDecoration(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(
+                                      width: 1, color: Color(0xFFD9D9D9)),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                          Positioned(
+                            left: 7,
+                            top: 7,
+                            child: SizedBox(
+                              width: 144,
+                              height: 160,
+                              child: Image.asset("assets/1a.jpg"),
+                            ),
+                          ),
+                          Positioned(
+                            left: 14,
+                            top: 172,
+                            child: Container(
+                              width: 138,
+                              height: 20,
+                              child: Text(
+                                'Hello wednesday!🎀',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.bold,
+                                  height: 0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

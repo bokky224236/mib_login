@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Allproduct(), // แก้ Allproduct เป็น Allproduct()
+      home: Allproduct(), 
     );
   }
 }
@@ -59,7 +59,7 @@ class Allproduct extends StatelessWidget {
                   Flexible(
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'Search in Store',
+                        hintText: 'Search in Product',
                         hintStyle: TextStyle(fontSize: 18),
                         border: InputBorder.none,
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login2/User/product/productpage2.dart';
 import 'package:flutter_login2/User/product/productpage.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
@@ -65,7 +66,7 @@ class Allproduct2 extends StatelessWidget {
                   Flexible(
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'Search in Store',
+                        hintText: 'Search in Product',
                         hintStyle: TextStyle(fontSize: 18),
                         border: InputBorder.none,
                       ),
@@ -119,7 +120,7 @@ class BrandItem extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => productPage(imagePath: imagePath)),
+          MaterialPageRoute(builder: (context) => productPage2(imagePath: imagePath)),
         );
       },
       child: Container(

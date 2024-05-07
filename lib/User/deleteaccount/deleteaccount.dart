@@ -3,6 +3,7 @@ import 'package:flutter_login2/User/login/login.dart';
 import 'package:flutter_login2/User/homepagemew/homepagemew.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_login2/main.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

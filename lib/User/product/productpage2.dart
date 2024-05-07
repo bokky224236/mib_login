@@ -19,10 +19,10 @@ import 'package:flutter_login2/screenmycart/cart_provider.dart';
 import 'package:flutter_login2/screenmycart/widget.dart';
 import 'package:provider/provider.dart';
 
-class productPage extends StatelessWidget {
+class productPage2 extends StatelessWidget {
   final String imagePath;
 
-  const productPage({required this.imagePath});
+  const productPage2({required this.imagePath});
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class productPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CatalogScreen(imagePath: 'assets/')),
+                      MaterialPageRoute(builder: (context) => CatalogScreen2(imagePath: 'assets/')),
                     );
                   },
                   style: ElevatedButton.styleFrom(
