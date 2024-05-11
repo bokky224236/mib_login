@@ -3,7 +3,7 @@ import 'package:flutter_login2/User/taskbar/navbar.dart';
 import 'package:flutter_login2/User/setting/setting.dart';
 import 'package:flutter_login2/User/store/store.dart';
 import 'package:flutter_login2/User/wishlist/wishlist.dart';
-import 'package:flutter_login2/User/homepagemew/homepagemew.dart';
+import 'package:flutter_login2/User/homepage/homepage.dart';
 
 /// Flutter code sample for [NavigationBar].
 

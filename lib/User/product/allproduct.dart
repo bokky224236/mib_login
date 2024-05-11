@@ -6,7 +6,7 @@ import 'package:flutter_login2/User/signup/signup.dart';
 import 'package:flutter_login2/User/taskbar/navbar.dart';
 import 'package:flutter_login2/User/store/store.dart';
 import 'package:flutter_login2/User/login/login.dart';
-import 'package:flutter_login2/User/homepagemew/homepagemew.dart';
+import 'package:flutter_login2/User/homepage/homepage.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_login2/screenmycart/cart_provider.dart';
 import 'package:flutter_login2/screenmycart/catalog_screen.dart';
