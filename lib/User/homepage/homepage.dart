@@ -34,21 +34,22 @@ class HomePagemew extends StatelessWidget {
           children: [
             Text(
               'Have a good day',
-              style: TextStyle(fontSize: 16.0),
+              style: TextStyle(fontSize: 14.0),
             ),
             Text(
               'Ron Weasley',
-              style: TextStyle(fontSize: 24.0),
+              style: TextStyle(fontSize: 18.0),
             ),
           ],
         ),
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart),
+            iconSize: 25, // ปรับความสูงของไอคอนเป็น 28 พิกเซล
             onPressed: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
+                context,
+                MaterialPageRoute(
                   builder: (context) => CartScreen(imagePath: 'assets/'),
                 ),
               );
@@ -56,7 +57,7 @@ class HomePagemew extends StatelessWidget {
           ),
         ],
       ),
-      body: SingleChildScrollView( // ใช้ SingleChildScrollView เพื่อให้สามารถเลื่อนหน้าจอได้
+      body: SingleChildScrollView( 
         child: Column(
           children: [
             Container(
@@ -87,13 +88,13 @@ class HomePagemew extends StatelessWidget {
                   SizedBox(height: 20),
                   Text(
                     'Category',
-                    style: TextStyle(fontSize: 20.0),
+                    style: TextStyle(fontSize: 16.0),
                   ),
                   SizedBox(height: 10.0),
                  Container(
                   alignment: Alignment.center,
                   child: Wrap(
-                    spacing: 25,
+                    spacing: 18,
                     runSpacing: 10,
                     children: List.generate(imageAssetPaths.length, (index) {
                       String categoryText = '';
@@ -151,12 +152,12 @@ class HomePagemew extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 25.0),
                   Text(
                     'Popular Products',
-                    style: TextStyle(fontSize: 20.0),
+                    style: TextStyle(fontSize: 16.0),
                   ),
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
                   Row(
                     children: [
                       Expanded(
@@ -185,7 +186,7 @@ class HomePagemew extends StatelessWidget {
                                 SizedBox(height: 5.0),
                                 Text(
                                   'Hello wednesday!🎀',
-                                  style: TextStyle(fontSize: 16.0),
+                                  style: TextStyle(fontSize: 14.0),
                                 ),
                               ],
                             ),
@@ -219,7 +220,7 @@ class HomePagemew extends StatelessWidget {
                                 SizedBox(height: 5.0),
                                 Text(
                                   'Hello wednesday!🎀',
-                                  style: TextStyle(fontSize: 16.0),
+                                  style: TextStyle(fontSize: 14.0),
                                 ),
                               ],
                             ),
